@@ -1,0 +1,40 @@
+{
+  "name": "docker/wordpress",
+  "description": "Project template for Drupal 8 projects with composer",
+  "type": "project",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "",
+      "role": ""
+    }
+  ],
+  "repositories":[
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "composer/installers": "^1.2",
+    "drupal-composer/preserve-paths": "0.1.*",
+    "johnpbloch/wordpress-core-installer": "^1.0",
+    "johnpbloch/wordpress-core": "~4.9"
+  },
+  "extra": {
+    "installer-paths": {
+      "docroot/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "docroot/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "preserve-paths": [
+      "docroot/wp-config.php",
+      "docroot/wp-content/uploads"
+    ],
+    "wordpress-install-dir": "docroot"
+  }
+}
