@@ -2,7 +2,7 @@
 
 ## Dependências
 
-- PHP 7.1
+- PHP 7.0
 - Apache 2.2
 - MySQL client 5.7
 

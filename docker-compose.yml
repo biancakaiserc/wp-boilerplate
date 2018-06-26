@@ -4,6 +4,7 @@ services:
     image: mysql:5.7
     container_name: ${PROJECT_NAME}-db
     env_file: .env
+    restart: always
     volumes:
       - $PWD/config/mysql/data:/var/lib/mysql
 
@@ -20,8 +21,10 @@ services:
     tty: true
     cap_add:
       - ALL
+    restart: always
     volumes:
       - $PWD:/var/www/html
       - $PWD/config/apache2/sites:/etc/apache2/sites-enabled
       - $PWD/config/apache2/logs:/var/log/apache2
-      - $PWD/config/php:/usr/local/etc/php/conf.d/ini
+      - $PWD/config/apache2/conf/apache2.conf:/etc/apache2/apache2.conf
+      - $PWD/config/php/php.ini:/usr/local/etc/php/php.ini
