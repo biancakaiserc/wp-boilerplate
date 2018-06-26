@@ -55,28 +55,6 @@ echo "--------- Settings Ready -------------"
 echo "--------------------------------------"
 echo ""
 
-# Creating files, if not exists.
-# if [ ! -d /var/www/html/docroot/sites/default/files ]
-# then
-#
-#   # Create basic files and ensure permissions.
-#   mkdir -p /var/www/html/docroot/sites/default/files
-#   mkdir -p /var/www/html/docroot/sites/default/files/translations
-# fi
-
-# echo ""
-# echo "--------------------------------------"
-# echo "------------ Files Ready -------------"
-# echo "--------------------------------------"
-# echo ""
-
-
-# Ensure permissions are correct.
-# chmod -R 777 /var/www/html/docroot/sites/default/files
-# chmod -R 777 /var/www/html/docroot/config
-# chmod 777 /var/www/html/docroot/wp-config.php
-# chmod +w -R /var/www/html/docroot/sites/default
-
 echo ""
 echo "------------------------------------"
 echo "----- Container ready to work! -----"
