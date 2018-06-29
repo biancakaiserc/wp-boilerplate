@@ -20,6 +20,12 @@ echo "------ Dependencies Installed --------"
 echo "--------------------------------------"
 echo ""
 
+# Configure GitIgnore file, if not exists.
+if [ ! -f /var/www/html/docroot/.gitignore ]
+then
+  cp /var/www/html/wordpress/gitignore.txt /var/www/html/docroot/.gitignore
+fi
+
 # Configure Project
 if [ ! -f /var/www/html/docroot/wp-config.php ]
 then
