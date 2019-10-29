@@ -31,8 +31,3 @@ package.lock
 */readme.html
 */sitemap.xml
 */sitemap.xml.gz
-
-
-## Remove this lines when using your project
-/docroot/*
-!/docroot/
